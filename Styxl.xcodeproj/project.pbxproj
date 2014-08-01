@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0A0E814A1989D121003F0F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E81491989D121003F0F56 /* AppDelegate.swift */; };
-		0A0E814C1989D121003F0F56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E814B1989D121003F0F56 /* ViewController.swift */; };
 		0A0E814F1989D121003F0F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E814D1989D121003F0F56 /* Main.storyboard */; };
 		0A0E81511989D121003F0F56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E81501989D121003F0F56 /* Images.xcassets */; };
 		0A0E815D1989D121003F0F56 /* StyxlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E815C1989D121003F0F56 /* StyxlTests.swift */; };
+		0A0E81681989D13F003F0F56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E81671989D13F003F0F56 /* ViewController.swift */; };
+		0A0E816B1989D1D9003F0F56 /* StyxlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E816A1989D1D9003F0F56 /* StyxlView.swift */; };
+		0A0E816D1989D2B6003F0F56 /* Styxl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E816C1989D2B6003F0F56 /* Styxl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +30,14 @@
 		0A0E81441989D121003F0F56 /* Styxl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Styxl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A0E81481989D121003F0F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A0E81491989D121003F0F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A0E814B1989D121003F0F56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A0E814E1989D121003F0F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A0E81501989D121003F0F56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0A0E81561989D121003F0F56 /* StyxlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StyxlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A0E815B1989D121003F0F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A0E815C1989D121003F0F56 /* StyxlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyxlTests.swift; sourceTree = "<group>"; };
+		0A0E81671989D13F003F0F56 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A0E816A1989D1D9003F0F56 /* StyxlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyxlView.swift; sourceTree = "<group>"; };
+		0A0E816C1989D2B6003F0F56 /* Styxl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styxl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +79,9 @@
 		0A0E81461989D121003F0F56 /* Styxl */ = {
 			isa = PBXGroup;
 			children = (
+				0A0E81691989D184003F0F56 /* styxl */,
+				0A0E81661989D13F003F0F56 /* viewControllers */,
 				0A0E81491989D121003F0F56 /* AppDelegate.swift */,
-				0A0E814B1989D121003F0F56 /* ViewController.swift */,
 				0A0E814D1989D121003F0F56 /* Main.storyboard */,
 				0A0E81501989D121003F0F56 /* Images.xcassets */,
 				0A0E81471989D121003F0F56 /* Supporting Files */,
@@ -107,6 +112,23 @@
 				0A0E815B1989D121003F0F56 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A0E81661989D13F003F0F56 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A0E81671989D13F003F0F56 /* ViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		0A0E81691989D184003F0F56 /* styxl */ = {
+			isa = PBXGroup;
+			children = (
+				0A0E816A1989D1D9003F0F56 /* StyxlView.swift */,
+				0A0E816C1989D2B6003F0F56 /* Styxl.swift */,
+			);
+			path = styxl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A0E814C1989D121003F0F56 /* ViewController.swift in Sources */,
+				0A0E81681989D13F003F0F56 /* ViewController.swift in Sources */,
+				0A0E816B1989D1D9003F0F56 /* StyxlView.swift in Sources */,
+				0A0E816D1989D2B6003F0F56 /* Styxl.swift in Sources */,
 				0A0E814A1989D121003F0F56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
