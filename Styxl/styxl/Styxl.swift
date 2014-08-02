@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PaletteMap : NSObject {
+class PaletteMap {
 
     var mapping : [String: Int]
     var palette : Palette
@@ -29,7 +29,6 @@ class PaletteMap : NSObject {
 
         self.palette = palette
         self.mapping = [:]
-        super.init()
         self.setStyles(names)
     }
 
@@ -48,7 +47,7 @@ class PaletteMap : NSObject {
 
 }
 
-class Palette : NSObject {
+class Palette {
 
     var colors  : [UIColor] = []
     var name    : String
@@ -74,42 +73,47 @@ class Palette : NSObject {
     }
 }
 
-class Styxl : NSObject {
+class Styxl {
 
-    var palettes        : [Palette] = []
-    var maps            : [String: PaletteMap] = [:]
-    var styles          : [String] = []
-    var selectedIndex   : Int = 0
+    var palettes        : [Palette]
+    var maps            : [String: PaletteMap]
+    var styles          : [String]
+    var selectedIndex   : Int
 
     init()  {
 
+        self.palettes       = []
+        self.styles         = []
+        self.maps           = [:]
+        self.selectedIndex  = 0
     }
 
     init(palettes: [Palette], styleNames: [String]) {
 
-
-        self.palettes   = palettes
-        self.styles     = styleNames
-        self.maps       = [:]
-        super.init()
-        self.setStyles(styleNames)
+        self.palettes       = palettes
+        self.maps           = [:]
+        self.selectedIndex  = 0
+        self.styles         = styleNames
+        self.setStyles(self.styles)
     }
 
-    func colorFor(name: String) -> UIColor? {
+    func colorFor(name: String) -> UIColor {
 
         var palatteName = self.currentPaletteName()
-        if (palatteName == nil) { return nil; }
+        if (palatteName == nil) { return UIColor.whiteColor(); }
 
-        var map = maps[palatteName!]
+        var map = self.maps[palatteName]
         return map!.colorFor(name)
     }
 
-    func currentPaletteName() -> String? {
+    func currentPaletteName() -> String {
         if (selectedIndex < palettes.count) { return palettes[selectedIndex].name; }
-        return nil
+        return ""
     }
 
     func setStyles(newStyles: [String]) {
+
+        styles = newStyles
 
         for palette in palettes {
             var map = PaletteMap(palette: palette, names: newStyles)
